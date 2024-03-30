@@ -36,7 +36,7 @@ pipeline {
        success {
             emailext subject: "Build Success Notification",
                      body: "The build succeeded. Good job!",
-                     to: "i202341@gmail.com"
+                     to: "i202341@nu.edu.pk"
         }
         failure {
             echo 'Build or push failed.'
