@@ -18,7 +18,7 @@ def train_model_function():  # Rename the function
     model = LGBMRegressor()
     model.fit(X_train, y_train)
 
-    # Saving the model and the test set for later use
+    # Saving the model and the test set for later use in the API
     joblib.dump(model, 'electric_car_model.joblib')
     X_test.to_csv('X_test.csv', index=False)
     y_test.to_csv('y_test.csv', index=False)
