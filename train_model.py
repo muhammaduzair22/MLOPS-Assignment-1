@@ -18,7 +18,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 model = LGBMRegressor()
 model.fit(X_train, y_train)
 
-# Saving the model and the test set for later use asda
+# Saving the model and the test set for later use 
 joblib.dump(model, 'electric_car_model.joblib')
 X_test.to_csv('X_test.csv', index=False)
 y_test.to_csv('y_test.csv', index=False)
