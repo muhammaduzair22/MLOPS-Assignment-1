@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_CREDENTIALS_ID = 'docker-hub-credentials'
-        IMAGE_NAME = 'your-dockerhub-username/your-app-name'
+        IMAGE_NAME = 'uzair22/MLOPS-Assignment-1'
     }
 
     stages {
