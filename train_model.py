@@ -24,3 +24,4 @@ def train_model_function():  # Rename the function
     y_test.to_csv('y_test.csv', index=False)
 
     print("Model training complete and model saved")
+    print("Model training complete and model saved")
