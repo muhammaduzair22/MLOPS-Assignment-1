@@ -1,1 +1,6 @@
-pytest
+pytespandas
+lightgbm
+joblib
+matplotlib
+scikit-learn
+flask
