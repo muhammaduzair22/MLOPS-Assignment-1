@@ -34,8 +34,9 @@ pipeline {
 
     post {
        success {
-        emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
-
+            emailext subject: "Build Success Notification",
+                     body: "The build succeeded. Good job!",
+                     to: "uzair.bh2000@gmail.com"
         }
         failure {
             echo 'Build or push failed.'
