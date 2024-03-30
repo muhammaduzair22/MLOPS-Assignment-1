@@ -24,3 +24,4 @@ X_test.to_csv('X_test.csv', index=False)
 y_test.to_csv('y_test.csv', index=False)
 
 print("Model training complete and model saved")
+print("Data Visualization started")
