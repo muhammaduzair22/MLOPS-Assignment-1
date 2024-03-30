@@ -2,7 +2,7 @@ name: Automated Testing
 
 on:
   pull_request:
-    branches: 
+    branches:
       - test
 
 jobs:
@@ -13,18 +13,18 @@ jobs:
         python-version: [3.12]
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.python-version }}
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
 
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
-        pip install pytest 
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install pytest
 
-    - name: Run pytest
-      run: pytest
-      working-directory: ./
+      - name: Run pytest
+        run: pytest
+        working-directory: ./MLOPS-Assignment-1
