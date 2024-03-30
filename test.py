@@ -1,12 +1,15 @@
 import unittest
 from unittest.mock import patch, MagicMock
 import pandas as pd
+from . import common_setup
 
 # Assuming your scripts are named train_model.py and visualize_predictions.py
 import train_model
 import visualize_predictions
 
 class TrainModelTestCase(unittest.TestCase):
+    def setUp(self):
+        common_setup()
 
     @patch('pandas.read_csv')
     @patch('joblib.dump')
@@ -20,6 +23,7 @@ class TrainModelTestCase(unittest.TestCase):
         })
         mock_read_csv.return_value = df
         
+
         # Execute the script (this is a simplification; in reality, you might want to call a specific function instead)
         with patch('train_model.print') as mock_print:
             train_model.run_training()  # Assuming you encapsulate the script's functionality in a function
