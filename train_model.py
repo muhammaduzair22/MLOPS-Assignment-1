@@ -6,6 +6,7 @@ import joblib
 def train_model_function():  # Rename the function
     # Load dataset
     df = pd.read_csv('ElectricCarData_Clean.csv')
+    print("start")
 
     # Selecting relevant features and the target variable
     X = df[['AccelSec', 'TopSpeed_KmH', 'Efficiency_WhKm']]
@@ -22,6 +23,7 @@ def train_model_function():  # Rename the function
     joblib.dump(model, 'electric_car_model.joblib')
     X_test.to_csv('X_test.csv', index=False)
     y_test.to_csv('y_test.csv', index=False)
-
+    
     print("Model training complete and model saved")
+
     print("Model training complete and model saved")
